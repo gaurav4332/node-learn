@@ -1,5 +1,6 @@
 const fs= require('fs')
-fs.readFile('./file/a.txt','utf-8',(err,data)=>{
+const path = require('path')
+fs.readFile(path.join(__dirname,'file','a.txt'),'utf-8',(err,data)=>{
   if(err) throw err
   console.log(data)
 })
